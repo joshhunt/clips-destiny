@@ -35,7 +35,10 @@ export default {
    */
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
-    modules: [path.join(__dirname, '..', 'app'), 'node_modules']
+    modules: [path.join(__dirname, '..', 'app'), 'node_modules'],
+    alias: {
+      'ffprobe-static$': path.join(__dirname, '..', 'app', 'ffprobe-static')
+    }
   },
 
   plugins: [

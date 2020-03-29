@@ -138,9 +138,8 @@ export default merge.smart(baseConfig, {
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
         use: {
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
-            limit: 10000,
             mimetype: 'application/font-woff'
           }
         }
@@ -149,9 +148,8 @@ export default merge.smart(baseConfig, {
       {
         test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
         use: {
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
-            limit: 10000,
             mimetype: 'application/font-woff'
           }
         }
@@ -160,9 +158,8 @@ export default merge.smart(baseConfig, {
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
         use: {
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
-            limit: 10000,
             mimetype: 'application/octet-stream'
           }
         }
@@ -176,17 +173,16 @@ export default merge.smart(baseConfig, {
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         use: {
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
-            limit: 10000,
             mimetype: 'image/svg+xml'
           }
         }
       },
       // Common Image Formats
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/,
-        use: 'url-loader'
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp|otf)$/,
+        use: 'file-loader'
       }
     ]
   },
